@@ -1,15 +1,11 @@
-import { getForecast, getForecast5day3hour } from "./services/weather";
-import { useEffect } from "react";
+import { Header, Weather_now } from "./components";
 
 export const App = () => {
-    useEffect(async () => {
-        const a = await getForecast5day3hour('Київ,uk');
-        console.log(a)
-    }, [])
 
     return (
         <div>
-
+            <Header/>
+            <Weather_now/>
         </div>
     );
 }
