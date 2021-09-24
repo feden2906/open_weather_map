@@ -7,7 +7,7 @@ export const locationReducer = (state = initialState, action) => {
 
   switch (type) {
     case SET_USER_LOCATION: {
-      return { ...state, genres: payload };
+      return { ...state, userLocation: payload };
     }
 
     default: {
