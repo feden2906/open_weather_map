@@ -7,4 +7,10 @@ const getForecast5day3hour = async (id) => {
   return data;
 }
 
-export { getForecast5day3hour };
+const getForecastByLocation = async (lat, lon) => {
+  const { data } = await AXIOS.get(`/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`) || {};
+
+  return data;
+}
+
+export { getForecast5day3hour, getForecastByLocation };

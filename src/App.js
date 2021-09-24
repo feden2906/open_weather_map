@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { Header, Weather_now } from "./components";
 import { setUserLocation } from "./redux";
+import { getForecastByLocation } from "./services";
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -10,7 +11,9 @@ export const App = () => {
   useEffect(async () => {
     await navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
           dispatch(setUserLocation({ latitude, longitude }));
+      // const resp = await getForecastByLocation(location);
     })
+
   }, []);
 
     return (
