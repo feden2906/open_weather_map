@@ -14,7 +14,6 @@ export const Search = () => {
     const typeSearchValue = async ({currentTarget: {value}}) => {
         setSearchValue(value);
         setArrCities(false);
-        // setDropDownIsVisible(true);
 
         if (value.length > 2) {
             try {
