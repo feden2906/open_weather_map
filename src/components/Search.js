@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { getSearchCity } from "../services";
+import { getForecast5day3hour, getSearchCity } from "../services";
 import { SearchDropContainer } from "./SearchDropContainer";
-import { getForecast5day3hour } from "../services/weather";
 import { setCity, setWeather } from "../redux";
 
 export const Search = () => {
@@ -46,7 +45,6 @@ export const Search = () => {
                 // onClick={() => setDropDownIsVisible(true)}
                    value={searchValue}
                    placeholder={'search...'}
-                // className={`${styles.searchInput} ${theme ? styles.dark : styles.white}`}
             />
 
             {
